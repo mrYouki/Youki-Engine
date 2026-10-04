@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    badge_pill_running.xml
+    Pill badge أخضر — نفس فكرة "ROOT" لكن بلون النشاط (نشط/Running)
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="4dp" />
+    <solid android:color="#2E7D32" />
+</shape>

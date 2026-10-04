@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    badge_pill_tertiary.xml
+    Pill badge بنفس روح "ROOT" في كارد البلوجن (cornerRadius 4dp + container color)
+    تُستخدم لشارة "أنت" (المستخدم الحالي)
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="4dp" />
+    <solid android:color="?attr/colorTertiaryContainer" />
+</shape>

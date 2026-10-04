@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Youki Users</string>
+
+    <!-- List screen -->
+    <string name="manage_users">Manage users</string>
+    <string name="loading_ellipsis">Loading…</string>
+    <string name="one_user_on_device">1 user on this device</string>
+    <string name="n_users_on_device">%1$d users on this device</string>
+    <string name="default_user_name">User %1$d</string>
+    <string name="you">You</string>
+    <string name="active">Active</string>
+    <string name="switch_action">Switch</string>
+    <string name="new_user">New user</string>
+
+    <!-- Empty / error states -->
+    <string name="cannot_fetch_users">Can\'t read users</string>
+    <string name="requires_shizuku_or_root">Managing users requires Shizuku or root. Start Shizuku and grant this app permission.</string>
+    <string name="could_not_read_users">Couldn\'t read the user list</string>
+    <string name="pm_list_users_no_valid_data">Shizuku/root is available, but \"pm list users\" returned no valid data.</string>
+    <string name="diagnostics">Diagnostics</string>
+    <string name="user_diagnostics">User diagnostics</string>
+    <string name="copy_report">Copy report</string>
+    <string name="report_copied">Report copied</string>
+    <string name="diag_status">Status</string>
+    <string name="diag_no_privilege">No Shizuku permission and no root.</string>
+    <string name="no_permission">no permission</string>
+    <string name="without_permissions">No privileges</string>
+
+    <!-- Create user -->
+    <string name="username_hint">User name</string>
+    <string name="choose_photo">Choose photo</string>
+    <string name="tap_to_choose_photo">Tap the circle to add a photo (optional)</string>
+    <string name="tap_to_change_photo">Tap the circle to change the photo</string>
+    <string name="enter_user_name">Enter a user name</string>
+    <string name="create">Create</string>
+    <string name="creating_user">Creating user…</string>
+    <string name="creating_user_named">Creating \"%1$s\"…</string>
+    <string name="create_user_success">User created (ID %1$d)</string>
+    <string name="create_user_failed">Couldn\'t create the user:\n%1$s</string>
+    <string name="completed_successfully">User created</string>
+    <string name="failed">Failed</string>
+
+    <!-- Switch / delete -->
+    <string name="switch_user">Switch user</string>
+    <string name="switch_to_user_confirm">Switch to \"%1$s\"?</string>
+    <string name="switch_user_success">Switching to user %1$d…</string>
+    <string name="switch_user_failed">Couldn\'t switch user:\n%1$s</string>
+    <string name="delete_user">Delete user</string>
+    <string name="delete_user_confirm">Delete \"%1$s\" and all of its data? This can\'t be undone.</string>
+    <string name="remove_user_primary_blocked">The primary user (ID 0) can\'t be deleted.</string>
+    <string name="remove_user_success">User %1$d deleted</string>
+    <string name="remove_user_failed">Couldn\'t delete the user:\n%1$s</string>
+
+    <!-- Avatars -->
+    <string name="privilege_required_create_user">Shizuku or root is required to create users</string>
+    <string name="privilege_required_change_avatar">Shizuku or root is required to change the photo</string>
+    <string name="avatar_load_failed">Couldn\'t load that image</string>
+    <string name="avatar_saved">Photo saved</string>
+
+    <!-- Generic -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="retry">Retry</string>
+    <string name="close">Close</string>
+</resources>

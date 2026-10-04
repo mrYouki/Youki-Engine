@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_user_card.xml — v2
+    - Shares the same DNA as the plugin card (buildMagiskCard in PluginStoreFragment):
+       - MaterialCardView: radius=16dp, stroke=1dp, elevation=2dp, bg=colorSurface
+       - margins: start/end=12dp, top/bottom=6dp
+       - a 48dp circle with a primaryContainer background for the icon/photo
+       - an info column (name 15sp bold + a meta line 11sp)
+       - a row of small badges (like ROOT) — here: "You" / "Active"
+       - a divider with marginStart=78dp (16+48+14)
+       - a bottom action row: a pill button (primaryContainer) + an IconButton for delete
+    - Same logic as "tapping the card = the primary action" (here: switch)
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ══════════ Top row: photo + info ══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="10dp">
+
+            <!-- ── The photo circle (same iconWrapper as the plugin card) ── -->
+            <FrameLayout
+                android:id="@+id/user_avatar_wrapper"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/circle_primary_container">
+
+                <!-- The user's photo (shown if it exists) -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/user_avatar_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:shapeAppearance="@style/ShapeAppearance.App.CircleImage" />
+
+                <!-- Default icon (no photo exists) -->
+                <ImageView
+                    android:id="@+id/user_avatar_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user"
+                    android:tint="?attr/colorOnPrimaryContainer" />
+
+            </FrameLayout>
+
+            <!-- ── The name and info column (like infoCol) ── -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- The name -->
+                <TextView
+                    android:id="@+id/user_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <!-- ID (like the vX.X line) -->
+                <TextView
+                    android:id="@+id/user_id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID 0"
+                    android:textSize="11sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <!-- The badges row (like the ROOT badge) -->
+                <LinearLayout
+                    android:id="@+id/user_badges_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone">
+
+                    <!-- Badge: You (the current user) -->
+                    <TextView
+                        android:id="@+id/user_current_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnTertiaryContainer"
+                        android:background="@drawable/badge_pill_tertiary"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:visibility="gone" />
+
+                    <!-- Badge: Active -->
+                    <TextView
+                        android:id="@+id/user_running_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@string/active"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/badge_pill_running"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ══════════ Divider (marginStart=78dp = 16+48+14) ══════════ -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="78dp"
+            android:background="?attr/colorOutlineVariant"
+            android:alpha="0.6" />
+
+        <!-- ══════════ The actions row (like actionRow) ══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp">
+
+            <!-- Delete button — a small IconButton, colorError -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/user_delete_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:icon="@drawable/ic_uninstall"
+                app:iconTint="?attr/colorError"
+                app:iconSize="18dp" />
+
+            <!-- Switch button — a Pill with the same style as the "Delete" button on the plugin card -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/user_switch_btn"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_action"
+                android:textSize="13sp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:backgroundTint="?attr/colorPrimaryContainer"
+                android:textColor="?attr/colorOnPrimaryContainer"
+                app:icon="@drawable/ic_granted"
+                app:iconTint="?attr/colorOnPrimaryContainer"
+                app:iconGravity="start"
+                app:iconSize="16dp"
+                app:iconPadding="4dp"
+                app:cornerRadius="50dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

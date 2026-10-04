@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">مستخدمو Youki</string>
+
+    <!-- List screen -->
+    <string name="manage_users">إدارة المستخدمين</string>
+    <string name="loading_ellipsis">جارٍ التحميل…</string>
+    <string name="one_user_on_device">مستخدم واحد على هذا الجهاز</string>
+    <string name="n_users_on_device">%1$d مستخدمين على هذا الجهاز</string>
+    <string name="default_user_name">مستخدم %1$d</string>
+    <string name="you">أنت</string>
+    <string name="active">نشط</string>
+    <string name="switch_action">تبديل</string>
+    <string name="new_user">مستخدم جديد</string>
+
+    <!-- Empty / error states -->
+    <string name="cannot_fetch_users">تعذّر قراءة المستخدمين</string>
+    <string name="requires_shizuku_or_root">إدارة المستخدمين تحتاج Shizuku أو صلاحية الروت. شغّل Shizuku وامنح التطبيق الإذن.</string>
+    <string name="could_not_read_users">تعذّرت قراءة قائمة المستخدمين</string>
+    <string name="pm_list_users_no_valid_data">Shizuku/الروت متاح، لكن الأمر \"pm list users\" لم يُرجع بيانات صالحة.</string>
+    <string name="diagnostics">تشخيص</string>
+    <string name="user_diagnostics">تشخيص المستخدمين</string>
+    <string name="copy_report">نسخ التقرير</string>
+    <string name="report_copied">تم نسخ التقرير</string>
+    <string name="diag_status">الحالة</string>
+    <string name="diag_no_privilege">لا يوجد إذن Shizuku ولا روت.</string>
+    <string name="no_permission">بدون إذن</string>
+    <string name="without_permissions">بدون صلاحيات</string>
+
+    <!-- Create user -->
+    <string name="username_hint">اسم المستخدم</string>
+    <string name="choose_photo">اختيار صورة</string>
+    <string name="tap_to_choose_photo">اضغط على الدائرة لإضافة صورة (اختياري)</string>
+    <string name="tap_to_change_photo">اضغط على الدائرة لتغيير الصورة</string>
+    <string name="enter_user_name">أدخل اسم المستخدم</string>
+    <string name="create">إنشاء</string>
+    <string name="creating_user">جارٍ إنشاء المستخدم…</string>
+    <string name="creating_user_named">جارٍ إنشاء \"%1$s\"…</string>
+    <string name="create_user_success">تم إنشاء المستخدم (المعرّف %1$d)</string>
+    <string name="create_user_failed">تعذّر إنشاء المستخدم:\n%1$s</string>
+    <string name="completed_successfully">تم إنشاء المستخدم</string>
+    <string name="failed">فشلت العملية</string>
+
+    <!-- Switch / delete -->
+    <string name="switch_user">تبديل المستخدم</string>
+    <string name="switch_to_user_confirm">التبديل إلى \"%1$s\"؟</string>
+    <string name="switch_user_success">جارٍ التبديل إلى المستخدم %1$d…</string>
+    <string name="switch_user_failed">تعذّر تبديل المستخدم:\n%1$s</string>
+    <string name="delete_user">حذف المستخدم</string>
+    <string name="delete_user_confirm">حذف \"%1$s\" وكل بياناته؟ لا يمكن التراجع عن ذلك.</string>
+    <string name="remove_user_primary_blocked">لا يمكن حذف المستخدم الأساسي (المعرّف 0).</string>
+    <string name="remove_user_success">تم حذف المستخدم %1$d</string>
+    <string name="remove_user_failed">تعذّر حذف المستخدم:\n%1$s</string>
+
+    <!-- Avatars -->
+    <string name="privilege_required_create_user">إنشاء المستخدمين يحتاج Shizuku أو الروت</string>
+    <string name="privilege_required_change_avatar">تغيير الصورة يحتاج Shizuku أو الروت</string>
+    <string name="avatar_load_failed">تعذّر تحميل هذه الصورة</string>
+    <string name="avatar_saved">تم حفظ الصورة</string>
+
+    <!-- Generic -->
+    <string name="ok">حسناً</string>
+    <string name="cancel">إلغاء</string>
+    <string name="confirm">تأكيد</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="close">إغلاق</string>
+</resources>
